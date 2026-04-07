@@ -28,3 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/playground', [PlaygroundController::class, 'index'])->name('playground.index');
     Route::get('/playground/modules/{slug}', [PlaygroundController::class, 'show'])->name('playground.show');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
